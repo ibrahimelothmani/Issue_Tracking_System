@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+}

@@ -1,0 +1,55 @@
+<div class="container-fluid" *ngIf="showReportIssue === false">
+  <div class="text-center">
+    <button
+      class="btn btn-primary bg-primary border border-5"
+      (click)="showReportIssue = true"
+    >
+      Add new issue
+    </button>
+  </div>
+
+  <div class="table-responsive mt-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Issue No</th>
+          <th scope="col">Type</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let issue of issues">
+          <td>{{ issue.issueNo }}</td>
+          <td>{{ issue.type }}</td>
+          <td>{{ issue.title }}</td>
+          <td>{{ issue.description }}</td>
+          <td>
+            <span
+              class="badge"
+              [ngClass]="{ 'bg-danger': issue.priority === 'high' }"
+            >
+              {{ issue.priority }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5" class="text-end">{{ issues.length }} issues</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<app-issue-report
+  *ngIf="showReportIssue"
+  (formClose)="onCloseReport()"
+></app-issue-report>
+<app-confirm-dialog
+  *ngIf="selectedIssue"
+  [issueNo]="selectedIssue.issueNo"
+  (confirm)="onConfirm($event)"
+></app-confirm-dialog>
