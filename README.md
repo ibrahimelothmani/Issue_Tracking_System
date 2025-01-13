@@ -1,3 +1,9 @@
+
+# IssueTrackingSystem --- PLAN ARCHITECTURE
+
+![plan architecture](https://github.com/user-attachments/assets/877dd092-b6bc-430c-9f02-fdf93dace9d9)
+
+
 # IssueTrackingSystem
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
